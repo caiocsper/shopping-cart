@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trybe Shopping</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/shopping_cart_icon.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./helpers/fetchItem.js" defer></script>
+    <script src="./helpers/fetchProducts.js" defer></script>
+    <script src="./helpers/saveCartItems.js" defer></script>
+    <script src="./helpers/getSavedCartItems.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="titleContainer">
+        <span class="title"><strong>trybe</strong>shopping</span>
+      </div>
+      <div class="searchBarContainer">
+        <div class="searchBar">
+          <button for="search" id="searchBtn">
+            <i class="material-icons">search</i>
+          </button>
+          <input type="text" name="search" id="search" placeholder="Não encontrou o que deseja? Procure aqui!">
+          <i class="material-icons" style="position: absolute; right: 0;">close</i>
+        </div>
+      </div>
+      <div class="cartIconContainer sideBar">
+        <i class="material-icons">shopping_cart</i>
+        <div id="cartItemsCounter">0</div>
+      </div>
+      <div class="cartTitleContainer sideBar">
+        <span class="cartTitle">Meu carrinho</span>
+        <div class="cartTotal">
+          <span class="totalSufix">R$</span>
+          <span class="totalPrice">0,00</span>
+        </div>
+      </div>
+    </header>
+    <main class="mainContainer">
+      <section class="productsContainer">
+        <section class="productsSortOptions">Ordernar por preço:
+          <div class="descend sortOrder" data-sortOrder="descend">
+            <span>Decrescente</span>
+            <i class="material-icons">south</i>
+          </div>
+          <div class="ascend sortOrder activeOption" data-sortOrder="ascend">
+            <span>Crescente</span>
+            <i class="material-icons">north</i>
+          </div>
+        </section>
+        <section class="productItemsContainer"></section>
+      </section>
+      <section class="cartContainer sideBar">
+        <ol class="cartItemsContainer"></ol>
+        <button class="emptyCart">Esvaziar carrinho</button>
+      </section>
+    </main>
+  </body>
+</html>
